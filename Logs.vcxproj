@@ -129,12 +129,14 @@
   <ItemGroup>
     <ClCompile Include="FileException.cpp" />
     <ClCompile Include="FileProcessor.cpp" />
+    <ClCompile Include="InputException.cpp" />
     <ClCompile Include="InputProcessor.cpp" />
     <ClCompile Include="Logs.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileException.h" />
     <ClInclude Include="FileProcessor.h" />
+    <ClInclude Include="InputException.h" />
     <ClInclude Include="InputProcessor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

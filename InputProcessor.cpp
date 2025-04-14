@@ -16,11 +16,14 @@ std::list<std::string> InputProcessor::GetInputs() {
 	try
 	{
 		std::list<std::string> lines;
-		std::string input = GetInput();
-
-		while (input != "Faset 5" || input != "faset 5" || input != "peridot, faset 5")
+		
+		while (true)
 		{
-			lines.push_back(input);
+			std::string input = GetInput();
+
+			lines.push_back(input + "\n");
+
+			if (input == "Faset 5" || input == "faset 5" || input == "peridot, faset 5" || input == "peridot faset 5") break;
 		}
 
 		return lines;

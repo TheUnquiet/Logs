@@ -3,7 +3,7 @@
 #include <fstream>
 #include <string>
 
-std::string FileProcessor::GetFilePath() {
+std::string& FileProcessor::GetFilePath() {
 	return FileProcessor::filePath;
 }
 
@@ -14,9 +14,9 @@ void FileProcessor::SetFilePath(std::string filePath) {
 	this->filePath = filePath;
 }
 
-void FileProcessor::WriteFile(std::list<std::string> lines) {
+void FileProcessor::WriteFile(std::list<std::string>& lines) {
 	try {
-		std::ofstream file(this->filePath + "log 1.txt");
+		std::ofstream file(this->filePath + "testLog.txt");
 
 		if (file.is_open()) {
 

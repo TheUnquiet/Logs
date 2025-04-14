@@ -22,6 +22,11 @@ int main()
 				std::cout << line;
 			}
 		}
+
+		if (input.find("write log") != std::string::npos) {
+			std::list<std::string> lines = ip.GetInputs();
+			fp.WriteFile(lines);
+		}
 	}
 	catch (const std::exception& ex)
 	{

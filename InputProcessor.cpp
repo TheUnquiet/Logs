@@ -1,7 +1,8 @@
 #include "InputProcessor.h"
+#include "InputException.h"
+
 #include <string>
 #include <list>
-#include "InputException.h"
 
 std::string InputProcessor::GetInput() {
 	std::string input;
@@ -23,7 +24,7 @@ std::list<std::string> InputProcessor::GetInputs() {
 
 			lines.push_back(input + "\n");
 
-			if (input == "Faset 5" || input == "faset 5" || input == "peridot, faset 5" || input == "peridot faset 5") break;
+			if (input == "Faset 5" || input == "faset 5" || input == "peridot, faset 5" || input == "peridot faset 5" || input == "peridot out") break;
 		}
 
 		return lines;

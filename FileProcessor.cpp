@@ -1,5 +1,6 @@
 #include "FileProcessor.h"
 #include "FileException.h"
+
 #include <fstream>
 #include <string>
 #include <ctime>
@@ -31,13 +32,15 @@ void FileProcessor::WriteFile(std::list<std::string>& lines) {
 
 		if (file.is_open()) {
 			file << "LOGDATE: [" + dateStr + "]\n";
+			file << "FASET: [ 5 ]\n\n";
 			for (auto& line : lines) {
 				file << line;
 			}
 
 			file.close();
 
-			std::cout << ">> File Saved\n" << "Run this command to read the file: " << dateStr + ".txt";
+			// TODO: copy the command to the clip board
+			std::cout << ">> File Saved\n" << "Run this command to read the file: read log: " << dateStr << "\n";
 		}
 		else throw FileException("Unable to open file.");
 	}
